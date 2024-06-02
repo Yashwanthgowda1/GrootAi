@@ -1,0 +1,58 @@
+body {
+  overflow: hidden;
+  font-family: Arial, sans-serif; /* Add a modern font */
+  background-color: #e8f0f7; /* Light background for better contrast */
+  margin: 0;
+  padding: 0;
+}
+
+/* General message styling */
+.gpt_message td, .user_message td {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-size: large;
+  display: inline-block;
+  position: relative;
+  color: rgb(14, 13, 13); /* Ensure text is white for contrast */
+}
+
+/* Specific styling for GPT messages */
+.gpt_message td {
+  background-color: #4a90e2; /* Soft blue for GPT messages */
+}
+
+/* Specific styling for user messages */
+.user_message td {
+  background-color: #f5a623; /* Vibrant orange for user messages */
+  float: right; /* Align user messages to the right */
+  clear: both; /* Ensure proper stacking of messages */
+}
+
+/* Define a root padding variable */
+:root {
+  --element-padding: 1.5rem;
+}
+
+/* Ensure the root and main elements take full height */
+#root > .MuiBox-root {
+  min-height: 100%;
+  padding: var(--element-padding);
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+/* Ensure main content takes full width */
+main {
+  flex: 1 0 100%;
+  padding: var(--element-padding);
+}
+
+/* Add a container for messages with a scrollable area */
+.message-container {
+  max-height: calc(100vh - 4rem); /* Adjust height dynamically */
+  overflow-y: auto; /* Add vertical scrolling */
+  padding: var(--element-padding);
+  box-sizing: border-box;
+}
